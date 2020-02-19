@@ -1,11 +1,7 @@
 /* ***** Conexión a Base de Datos: MongoDB ***** */
 const mongoose = require('mongoose');
 
-const URI = process.env.DB_MONGO_ATLAS ?
-            process.env.DB_MONGO_ATLAS :
-            (process.env.DB_MONGO_LOCAL ?
-            process.env.DB_MONGO_LOCAL :
-            'mongodb://localhost/databasetest');
+const URI = process.env.DB_MONGO_ATLAS;
 
 const conectarDB = async() => {
     try {

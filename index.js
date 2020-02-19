@@ -5,7 +5,8 @@ require('colors');
 const app = require('./app');
 const port = app.get('port');
 
-require('./db/database'); // Conexión a Base de Datos 
+const conectarDB = require('./db/database'); // Conexión a Base de Datos 
+conectarDB();
 
 const main = async() => { // Arranca el Servidor
     await app.listen(port, '0.0.0.0', () => {

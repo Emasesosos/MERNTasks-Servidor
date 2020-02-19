@@ -1,12 +1,9 @@
 // ***** Servidor ***** //
 require('dotenv').config();
 require('colors');
-require('cors');
 
 const app = require('./app');
 const port = app.get('port');
-
-app.use(cors());
 
 require('./db/database'); // Conexión a Base de Datos 
 

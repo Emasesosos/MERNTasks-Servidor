@@ -4,7 +4,8 @@
     "description": "MERN API para MERN TASKS",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon ./index.js --exec"
+        "start": "node .",
+        "dev": "nodemon ./index.js --exec"
     },
     "repository": {
         "type": "git",

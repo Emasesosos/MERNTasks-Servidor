@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 
 const URI = process.env.DB_MONGO_ATLAS;
+console.log(URI);
 
 const conectarDB = async() => {
     try {

@@ -24,5 +24,5 @@ const connection = mongoose.connection;
 // console.log(connection);
 
 connection.once('open', () => {
-    console.log('DB is Connected on: '.cyan, URI.magenta);
+    console.log('DB is Connected');
 });

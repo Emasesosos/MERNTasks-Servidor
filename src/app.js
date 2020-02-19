@@ -2,10 +2,10 @@
 const express = require('express');
 const app = express();
 const cors = require('cors'); // Permite la comunicación entre 2 servidores
-const PORT = process.env.PORT || 4000; // Puerto de la app
+const port = process.env.port || 4000; // Puerto de la app
 
 app.use(cors()); // Habilitando y/o Implementando cors 
-app.set('port', PORT); // Settings: Configurar Servidor: Puerto
+app.set('port', port); // Settings: Configurar Servidor: Puerto
 app.use(express.json({ extended: true })); // Habilitar express.json
 
 // Routes: urls que la aplicación puede visitar

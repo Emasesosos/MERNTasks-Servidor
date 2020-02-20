@@ -4,10 +4,19 @@ const app = express();
 const cors = require('cors'); // Permite la comunicación entre 2 servidores
 const port = process.env.port || 4000; // Puerto de la app
 
-app.use(cors()); // Habilitando y/o Implementando cors 
+// app.use(cors()); // Habilitando y/o Implementando cors 
+
+const corsOptions = {
+    origin: 'https://vast-taiga-45980.herokuapp.com',
+    optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
+app.options('*', cors());
 app.set('port', port); // Settings: Configurar Servidor: Puerto
 app.use(express.json({ extended: true })); // Habilitar express.json
 
+/*
 app.use(cors(), function(req, res, next) {
     res.header("Access-Control-Allow-Origin", '*');
     res.header("Access-Control-Allow-Credentials", true);
@@ -15,6 +24,7 @@ app.use(cors(), function(req, res, next) {
     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
     next();
 });
+*/
 
 // Routes: urls que la aplicación puede visitar
 const [

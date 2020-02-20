@@ -7,7 +7,7 @@ const port = process.env.port || 4000; // Puerto de la app
 // app.use(cors()); // Habilitando y/o Implementando cors 
 
 const corsOptions = {
-    origin: 'https://vast-taiga-45980.herokuapp.com',
+    origin: 'https://vast-taiga-45980.herokuapp.com/',
     optionsSuccessStatus: 200
 }
 

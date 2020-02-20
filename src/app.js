@@ -8,6 +8,14 @@ app.use(cors()); // Habilitando y/o Implementando cors
 app.set('port', port); // Settings: Configurar Servidor: Puerto
 app.use(express.json({ extended: true })); // Habilitar express.json
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", '*');
+    res.header("Access-Control-Allow-Credentials", true);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+    next();
+  });
+
 // Routes: urls que la aplicación puede visitar
 const [
     usuarios,
